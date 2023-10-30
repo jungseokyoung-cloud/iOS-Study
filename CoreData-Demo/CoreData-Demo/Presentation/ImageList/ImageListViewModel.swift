@@ -34,7 +34,7 @@ struct ImageListViewModel:
 	var indicatorState = BehaviorRelay<IndicatorState>(value: .stop)
 	
 	// MARK: - Initializers
-	init(dependency: RepositoryType = Repository()) {
+	init(dependency: RepositoryType = Repository(fetchType: .server)) {
 		self.dependency = dependency
 		
 		self.images = images$.asDriver(onErrorJustReturn: [])
@@ -46,7 +46,7 @@ private extension ImageListViewModel {
 	func fetch() {
 		Task {
 			indicatorState.accept(.start)
-			await dependency.fetchImages(from: .coreData)
+			await dependency.fetchImages(from: .server)
 				.observe(on: MainScheduler.instance)
 				.subscribe(
 					onSuccess: { self.images$.accept($0) }
