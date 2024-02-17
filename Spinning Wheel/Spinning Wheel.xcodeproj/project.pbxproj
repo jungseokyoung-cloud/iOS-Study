@@ -15,6 +15,7 @@
 		FEA1A2FA2B80C57B00CE3BDD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEA1A2F82B80C57B00CE3BDD /* LaunchScreen.storyboard */; };
 		FEA1A3032B80C73F00CE3BDD /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = FEA1A3022B80C73F00CE3BDD /* SnapKit */; };
 		FEA1A3052B80C7B400CE3BDD /* CircularViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA1A3042B80C7B400CE3BDD /* CircularViewModel.swift */; };
+		FEA1A3082B80C8E800CE3BDD /* CircularCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA1A3072B80C8E800CE3BDD /* CircularCollectionViewLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		FEA1A2F92B80C57B00CE3BDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FEA1A2FB2B80C57B00CE3BDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FEA1A3042B80C7B400CE3BDD /* CircularViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularViewModel.swift; sourceTree = "<group>"; };
+		FEA1A3072B80C8E800CE3BDD /* CircularCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularCollectionViewLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 		FEA1A2EC2B80C57900CE3BDD /* Spinning Wheel */ = {
 			isa = PBXGroup;
 			children = (
+				FEA1A3062B80C8D900CE3BDD /* CircularCollectionView */,
 				FEA1A2ED2B80C57900CE3BDD /* AppDelegate.swift */,
 				FEA1A2EF2B80C57900CE3BDD /* SceneDelegate.swift */,
 				FEA1A2F12B80C57900CE3BDD /* ViewController.swift */,
@@ -70,6 +73,14 @@
 				FEA1A2FB2B80C57B00CE3BDD /* Info.plist */,
 			);
 			path = "Spinning Wheel";
+			sourceTree = "<group>";
+		};
+		FEA1A3062B80C8D900CE3BDD /* CircularCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				FEA1A3072B80C8E800CE3BDD /* CircularCollectionViewLayout.swift */,
+			);
+			path = CircularCollectionView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +162,7 @@
 			files = (
 				FEA1A2F22B80C57900CE3BDD /* ViewController.swift in Sources */,
 				FEA1A2EE2B80C57900CE3BDD /* AppDelegate.swift in Sources */,
+				FEA1A3082B80C8E800CE3BDD /* CircularCollectionViewLayout.swift in Sources */,
 				FEA1A3052B80C7B400CE3BDD /* CircularViewModel.swift in Sources */,
 				FEA1A2F02B80C57900CE3BDD /* SceneDelegate.swift in Sources */,
 			);

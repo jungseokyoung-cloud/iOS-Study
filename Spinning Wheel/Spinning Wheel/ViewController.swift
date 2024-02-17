@@ -22,6 +22,13 @@ class ViewController: UIViewController {
 		.init(text: "10", color: .purple)
 	]
 	
+	// MARK: - UI Components
+	private let collectionView = UICollectionView(
+		frame: .zero,
+		collectionViewLayout: CircularCollectionViewLayout()
+	)
+	
+	// MARK: - Life Cycle
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		setupUI()
@@ -29,5 +36,8 @@ class ViewController: UIViewController {
 }
 
 private extension ViewController {
-	func setupUI() { }
+	func setupUI() {
+		view.addSubview(collectionView)
+		collectionView.snp.makeConstraints { $0.edges.equalToSuperview() }
+	}
 }
