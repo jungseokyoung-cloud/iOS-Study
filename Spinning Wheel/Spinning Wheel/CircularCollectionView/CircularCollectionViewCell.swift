@@ -23,6 +23,16 @@ final class CircularCollectionViewCell: UICollectionViewCell {
 		fatalError("init(coder:) has not been implemented")
 	}
 	
+	// MARK: - Apply Method
+	override func apply(_ layoutAttributes: UICollectionViewLayoutAttributes) {
+		super.apply(layoutAttributes)
+		
+		guard let circularLayoutAttributes = layoutAttributes as? CircularCollectionViewLayoutAttributes else { return }
+		
+		self.layer.anchorPoint = circularLayoutAttributes.anchorPoint
+		self.center.y += (circularLayoutAttributes.anchorPoint.y - 0.5) * CGRectGetHeight(self.bounds)
+	}
+	
 	// MARK: - Configure Method
 	func configure(with viewModel: CircularViewModel) {
 		self.backgroundColor = viewModel.color

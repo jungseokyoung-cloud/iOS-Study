@@ -48,6 +48,9 @@ final class CircularCollectionViewLayout: UICollectionViewLayout {
 		// CollectionView에서 center에 위치한 offset
 		let centerX = collectionView.contentOffset.x + (CGRectGetWidth(collectionView.bounds) / 2.0)
 		
+		// anchorPoint는 0~1의 값을 갖기 때문에 scaling을 해준다.
+		let anchorPointY = ((itemSize.height / 2.0) + radius) / itemSize.height
+		
 		attributesList = (0..<collectionView.numberOfItems(inSection: 0)).map { index -> CircularCollectionViewLayoutAttributes in
 			let indexPath = IndexPath(row: index, section: 0)
 			let attributes = CircularCollectionViewLayoutAttributes(forCellWith: indexPath)
@@ -58,6 +61,10 @@ final class CircularCollectionViewLayout: UICollectionViewLayout {
 				x: centerX,
 				y: CGRectGetMidY(collectionView.bounds)
 			)
+			
+			// anchorPoint를 지정
+			attributes.anchorPoint = CGPoint(x: 0.5, y: anchorPointY)
+
 			// 여기서 각도만 변경!
 			attributes.angle = self.anglePerItem*CGFloat(index)
 			return attributes

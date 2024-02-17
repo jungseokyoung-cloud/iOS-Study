@@ -8,6 +8,8 @@
 import UIKit
 
 final class CircularCollectionViewLayoutAttributes: UICollectionViewLayoutAttributes {
+	/// Cell의 AnchorPoint를 정의 한다 (회천축)
+	var anchorPoint = CGPoint(x: 0.5, y: 0.5)
 	/// Cell의 각도 (0번 cell을 기준으로 각도를 정의한다.)
 	var angle: CGFloat = 0 {
 		didSet {
@@ -26,7 +28,8 @@ final class CircularCollectionViewLayoutAttributes: UICollectionViewLayoutAttrib
 		guard let copiedCircularAttributes : CircularCollectionViewLayoutAttributes = copiedAttributes as? CircularCollectionViewLayoutAttributes else {
 			return copiedAttributes
 		}
-
+		
+		copiedCircularAttributes.anchorPoint = self.anchorPoint
 		copiedCircularAttributes.angle = self.angle
 		return copiedCircularAttributes
 	}
