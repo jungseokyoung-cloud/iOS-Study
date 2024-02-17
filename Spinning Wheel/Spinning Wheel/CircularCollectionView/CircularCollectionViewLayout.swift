@@ -68,7 +68,9 @@ final class CircularCollectionViewLayout: UICollectionViewLayout {
 		// anchorPoint는 0~1의 값을 갖기 때문에 scaling을 해준다.
 		let anchorPointY = ((itemSize.height / 2.0) + radius) / itemSize.height
 		
-		attributesList = (0..<collectionView.numberOfItems(inSection: 0)).map { index -> CircularCollectionViewLayoutAttributes in
+		let (startIndex, endIndex) = visibleIndexRange()
+		
+		attributesList = (startIndex...endIndex).map { index -> CircularCollectionViewLayoutAttributes in
 			let indexPath = IndexPath(row: index, section: 0)
 			let attributes = CircularCollectionViewLayoutAttributes(forCellWith: indexPath)
 			attributes.size = self.itemSize
@@ -93,12 +95,35 @@ final class CircularCollectionViewLayout: UICollectionViewLayout {
 		return attributesList
 	}
 	
-	override func layoutAttributesForItem(at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
-		return attributesList[indexPath.row]
-	}
-	
 	// Scroll할때 Layout재계산하도록 한다.
 	override func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
 		return true
+	}
+}
+
+// MARK: - Private Method
+private extension CircularCollectionViewLayout {
+	/// 화면에 보이는 Cell의 Index범위를 리턴합니다.
+	func visibleIndexRange() -> (startIndex: Int, endIndex: Int) {
+		guard let collectionView else { return (0, 0) }
+
+		let theta = atan2(CGRectGetWidth(collectionView.bounds) / 2.0,
+											radius + (itemSize.height / 2.0) - (CGRectGetHeight(collectionView.bounds) / 2.0))
+
+		var startIndex = 0
+		var endIndex = collectionView.numberOfItems(inSection: 0) - 1
+
+		if (angle < -theta) {
+			startIndex = Int(floor((-theta - angle) / anglePerItem))
+		}
+
+		endIndex = min(endIndex, Int(ceil((theta - angle) / anglePerItem)))
+
+		if (endIndex < startIndex) {
+			endIndex = 0
+			startIndex = 0
+		}
+		
+		return (startIndex, endIndex)
 	}
 }
