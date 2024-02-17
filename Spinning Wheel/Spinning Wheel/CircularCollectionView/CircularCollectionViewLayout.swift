@@ -21,6 +21,23 @@ final class CircularCollectionViewLayout: UICollectionViewLayout {
 		return atan(itemSize.width / radius)
 	}
 	
+	/// `CollectionView`에서  최대 각도를 정의한다.
+	var angleAtExtreme: CGFloat {
+		guard let collectionView else { return .zero }
+		
+		let itemCount = collectionView.numberOfItems(inSection: 0)
+		
+		return itemCount > 0 ? -CGFloat(itemCount - 1) * anglePerItem : 0
+	}
+	
+	/// 현재 `CollectionView`의 각도를 정의한다.
+	var angle: CGFloat {
+		guard let collectionView else { return .zero }
+		
+		return angleAtExtreme * collectionView.contentOffset.x / (collectionViewContentSize.width -
+			CGRectGetWidth(collectionView.bounds))
+	}
+	
 	/// LayoutAttributes를 캐싱하기 위한 프로퍼티
 	var attributesList = [CircularCollectionViewLayoutAttributes]()
 	
@@ -66,7 +83,8 @@ final class CircularCollectionViewLayout: UICollectionViewLayout {
 			attributes.anchorPoint = CGPoint(x: 0.5, y: anchorPointY)
 
 			// 여기서 각도만 변경!
-			attributes.angle = self.anglePerItem*CGFloat(index)
+			attributes.angle = self.angle + (self.anglePerItem * CGFloat(index))
+			
 			return attributes
 		}
 	}
@@ -77,5 +95,10 @@ final class CircularCollectionViewLayout: UICollectionViewLayout {
 	
 	override func layoutAttributesForItem(at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
 		return attributesList[indexPath.row]
+	}
+	
+	// Scroll할때 Layout재계산하도록 한다.
+	override func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
+		return true
 	}
 }
