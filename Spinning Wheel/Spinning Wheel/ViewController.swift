@@ -6,14 +6,28 @@
 //
 
 import UIKit
+import SnapKit
 
 class ViewController: UIViewController {
-
+	private let dataSource: [CircularViewModel] = [
+		.init(text: "1", color: .red),
+		.init(text: "2", color: .blue),
+		.init(text: "3", color: .brown),
+		.init(text: "4", color: .cyan),
+		.init(text: "5", color: .yellow),
+		.init(text: "6", color: .green),
+		.init(text: "7", color: .gray),
+		.init(text: "8", color: .magenta),
+		.init(text: "9", color: .orange),
+		.init(text: "10", color: .purple)
+	]
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view.
+		setupUI()
 	}
-
-
 }
 
+private extension ViewController {
+	func setupUI() { }
+}
