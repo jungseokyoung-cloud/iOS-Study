@@ -16,6 +16,8 @@
 		FEA1A3032B80C73F00CE3BDD /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = FEA1A3022B80C73F00CE3BDD /* SnapKit */; };
 		FEA1A3052B80C7B400CE3BDD /* CircularViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA1A3042B80C7B400CE3BDD /* CircularViewModel.swift */; };
 		FEA1A3082B80C8E800CE3BDD /* CircularCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA1A3072B80C8E800CE3BDD /* CircularCollectionViewLayout.swift */; };
+		FEA1A30A2B80CE5A00CE3BDD /* CircularCollectionViewAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA1A3092B80CE5A00CE3BDD /* CircularCollectionViewAttributes.swift */; };
+		FEA1A30C2B80D55000CE3BDD /* CircularCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA1A30B2B80D55000CE3BDD /* CircularCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		FEA1A2FB2B80C57B00CE3BDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FEA1A3042B80C7B400CE3BDD /* CircularViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularViewModel.swift; sourceTree = "<group>"; };
 		FEA1A3072B80C8E800CE3BDD /* CircularCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularCollectionViewLayout.swift; sourceTree = "<group>"; };
+		FEA1A3092B80CE5A00CE3BDD /* CircularCollectionViewAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularCollectionViewAttributes.swift; sourceTree = "<group>"; };
+		FEA1A30B2B80D55000CE3BDD /* CircularCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,8 @@
 			isa = PBXGroup;
 			children = (
 				FEA1A3072B80C8E800CE3BDD /* CircularCollectionViewLayout.swift */,
+				FEA1A3092B80CE5A00CE3BDD /* CircularCollectionViewAttributes.swift */,
+				FEA1A30B2B80D55000CE3BDD /* CircularCollectionViewCell.swift */,
 			);
 			path = CircularCollectionView;
 			sourceTree = "<group>";
@@ -160,6 +166,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEA1A30A2B80CE5A00CE3BDD /* CircularCollectionViewAttributes.swift in Sources */,
+				FEA1A30C2B80D55000CE3BDD /* CircularCollectionViewCell.swift in Sources */,
 				FEA1A2F22B80C57900CE3BDD /* ViewController.swift in Sources */,
 				FEA1A2EE2B80C57900CE3BDD /* AppDelegate.swift in Sources */,
 				FEA1A3082B80C8E800CE3BDD /* CircularCollectionViewLayout.swift in Sources */,
