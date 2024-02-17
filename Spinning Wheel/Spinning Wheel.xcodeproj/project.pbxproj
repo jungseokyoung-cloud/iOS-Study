@@ -13,6 +13,7 @@
 		FEA1A2F52B80C57900CE3BDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEA1A2F32B80C57900CE3BDD /* Main.storyboard */; };
 		FEA1A2F72B80C57B00CE3BDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEA1A2F62B80C57B00CE3BDD /* Assets.xcassets */; };
 		FEA1A2FA2B80C57B00CE3BDD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEA1A2F82B80C57B00CE3BDD /* LaunchScreen.storyboard */; };
+		FEA1A3032B80C73F00CE3BDD /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = FEA1A3022B80C73F00CE3BDD /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEA1A3032B80C73F00CE3BDD /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +85,9 @@
 			dependencies = (
 			);
 			name = "Spinning Wheel";
+			packageProductDependencies = (
+				FEA1A3022B80C73F00CE3BDD /* SnapKit */,
+			);
 			productName = "Spinning Wheel";
 			productReference = FEA1A2EA2B80C57900CE3BDD /* Spinning Wheel.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +116,9 @@
 				Base,
 			);
 			mainGroup = FEA1A2E12B80C57900CE3BDD;
+			packageReferences = (
+				FEA1A3012B80C73F00CE3BDD /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = FEA1A2EB2B80C57900CE3BDD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -363,6 +371,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FEA1A3012B80C73F00CE3BDD /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FEA1A3022B80C73F00CE3BDD /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FEA1A3012B80C73F00CE3BDD /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FEA1A2E22B80C57900CE3BDD /* Project object */;
 }
