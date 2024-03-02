@@ -15,6 +15,7 @@
 		FEA1A34F2B90935100CE3BDD /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = FEA1A34E2B90935100CE3BDD /* SnapKit */; };
 		FEA1A3512B90959400CE3BDD /* MoveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA1A3502B90959400CE3BDD /* MoveViewController.swift */; };
 		FEA1A3532B9095CF00CE3BDD /* ScaleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA1A3522B9095CF00CE3BDD /* ScaleViewController.swift */; };
+		FEA1A3572B90B6F000CE3BDD /* AnimationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA1A3562B90B6F000CE3BDD /* AnimationButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		FEA1A3472B90513900CE3BDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FEA1A3502B90959400CE3BDD /* MoveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveViewController.swift; sourceTree = "<group>"; };
 		FEA1A3522B9095CF00CE3BDD /* ScaleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleViewController.swift; sourceTree = "<group>"; };
+		FEA1A3562B90B6F000CE3BDD /* AnimationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,10 +76,19 @@
 		FEA1A3542B9095F600CE3BDD /* AnimationViewController */ = {
 			isa = PBXGroup;
 			children = (
+				FEA1A3552B909B6C00CE3BDD /* Views */,
 				FEA1A3502B90959400CE3BDD /* MoveViewController.swift */,
 				FEA1A3522B9095CF00CE3BDD /* ScaleViewController.swift */,
 			);
 			path = AnimationViewController;
+			sourceTree = "<group>";
+		};
+		FEA1A3552B909B6C00CE3BDD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FEA1A3562B90B6F000CE3BDD /* AnimationButton.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,6 +167,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEA1A3572B90B6F000CE3BDD /* AnimationButton.swift in Sources */,
 				FEA1A33E2B90513700CE3BDD /* MainViewController.swift in Sources */,
 				FEA1A3532B9095CF00CE3BDD /* ScaleViewController.swift in Sources */,
 				FEA1A3512B90959400CE3BDD /* MoveViewController.swift in Sources */,
