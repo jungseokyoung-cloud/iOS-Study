@@ -1,15 +1,14 @@
 //
-//  MoveViewController.swift
+//  RotateViewController.swift
 //  CoreAnimationEx
 //
-//  Created by jung on 2/29/24.
+//  Created by jung on 3/3/24.
 //
 
 import UIKit
 import SnapKit
 
-final class MoveViewController: UIViewController {
-	// MARK: - UI Components
+final class RotateViewController: UIViewController {
 	private let animationView: UIView = {
 		let view = UIView()
 		view.backgroundColor = .red
@@ -17,7 +16,7 @@ final class MoveViewController: UIViewController {
 		return view
 	}()
 
-	private let animationButton = AnimationButton(text: "Move")
+	private let animationButton = AnimationButton(text: "Rotate")
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -32,17 +31,15 @@ final class MoveViewController: UIViewController {
 }
 
 // MARK: - UI Methods
-private extension MoveViewController {
+private extension RotateViewController {
 	func setupUI() {
-		self.title = "Move Animation"
-		self.view.backgroundColor = .white
-
-		view.addSubview(animationButton)
+		title = "Rotate Animation"
+		view.backgroundColor = .white
 		view.addSubview(animationView)
+		view.addSubview(animationButton)
 		
 		animationView.snp.makeConstraints { make in
-			make.leading.equalToSuperview().offset(20)
-			make.top.equalToSuperview().offset(100)
+			make.center.equalToSuperview()
 			make.width.equalTo(140)
 			make.height.equalTo(100)
 		}
@@ -55,22 +52,22 @@ private extension MoveViewController {
 }
 
 // MARK: - Action Methods
-private extension MoveViewController {
+private extension RotateViewController {
 	@objc func didTapButton() {
 		// 1. Animation 생성
 		let animation = CABasicAnimation()
-		animation.keyPath = "position.x"
-		
+		animation.keyPath = "transform.rotation.z"
+
 		// 2. Animation의 속성 지정
-		animation.beginTime = CACurrentMediaTime() + 0.8
-		animation.fromValue = 20 + 140/2
-		animation.toValue = 300
+		animation.fromValue = 0
+		animation.toValue = CGFloat.pi / 2
 		animation.duration = 0.5
 		
 		// 3. Layer에 animation 추가
-		animationView.layer.add(animation, forKey: "Move")
-		
-		// 4. 최종위치 변경
-		animationView.layer.position = CGPoint(x: 300, y: 100 + 100/2)
+		animationView.layer.add(animation, forKey: "Rotate")
+
+		// 4. 최종상태 변경
+		animationView.layer.transform = CATransform3DMakeRotation(CGFloat.pi / 2, 0, 0, 1)
+
 	}
 }
