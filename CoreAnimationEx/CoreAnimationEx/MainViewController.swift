@@ -15,7 +15,11 @@ class MainViewController: UIViewController {
 	
 	private let dataSource: [Item] = [
 		Item(text: "Move", viewController: MoveViewController()),
-		Item(text: "Scale", viewController: ScaleViewController())
+		Item(text: "Scale", viewController: ScaleViewController()),
+		Item(text: "Rotate", viewController: RotateViewController()),
+		Item(text: "Shake", viewController: ShakeViewController()),
+		Item(text: "Circling", viewController: CirclingViewController()),
+		Item(text: "Notification", viewController: NotificationViewContoller())
 	]
 	
 	// MARK: - UI Components

@@ -54,19 +54,39 @@ private extension ScaleViewController {
 // MARK: - Action Methods
 private extension ScaleViewController {
 	@objc func didTapButton() {
-		// 1. Animation 생성
-		let animation = CABasicAnimation()
-		animation.keyPath = "transform.scale"
-
-		// 2. Animation의 속성 지정
-		animation.fromValue = 1
-		animation.toValue = 2
-		animation.duration = 0.5
+		let animation = basicScaleAnimation(from: 1, to: 2)
 		
 		// 3. Layer에 animation 추가
 		animationView.layer.add(animation, forKey: "Scale")
 		
 		// 4. 최종상태 변경
 		animationView.layer.transform = CATransform3DMakeScale(2, 2, 1)
+
+
+	}
+	
+	func basicScaleAnimation(from: CGFloat, to: CGFloat, duration: CGFloat = 0.5) -> CABasicAnimation {
+		// 1. Animation 생성
+		let animation = CABasicAnimation()
+		animation.keyPath = "transform.scale"
+
+		// 2. Animation의 속성 지정
+		animation.fromValue = from
+		animation.toValue = to
+		animation.duration = duration
+		
+		return animation
+	}
+	
+	func springScaleAnimation(from: CGFloat, to: CGFloat, duration: CGFloat = 0.5, damping: CGFloat = 2) -> CASpringAnimation {
+		let animation = CASpringAnimation(keyPath: "transform.scale")
+		
+		animation.fromValue = from
+		animation.toValue = to
+		animation.duration = duration
+		// spring되는 정도를 조정할 수 있음.
+		animation.damping = damping
+		
+		return animation
 	}
 }
