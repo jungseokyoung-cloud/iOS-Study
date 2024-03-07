@@ -19,7 +19,9 @@ class MainViewController: UIViewController {
 		Item(text: "Rotate", viewController: RotateViewController()),
 		Item(text: "Shake", viewController: ShakeViewController()),
 		Item(text: "Circling", viewController: CirclingViewController()),
-		Item(text: "Notification", viewController: NotificationViewContoller())
+		Item(text: "Notification", viewController: NotificationViewContoller()),
+		Item(text: "FadeAndScale", viewController: FadeAndScaleOutViewController()),
+		Item(text: "CATransition", viewController: CATransitionViewController())
 	]
 	
 	// MARK: - UI Components

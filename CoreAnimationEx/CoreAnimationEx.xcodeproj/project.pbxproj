@@ -20,6 +20,8 @@
 		FEA1A3632B93807700CE3BDD /* ShakeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA1A3622B93807700CE3BDD /* ShakeViewController.swift */; };
 		FEA1A3652B938DB200CE3BDD /* CirclingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA1A3642B938DB200CE3BDD /* CirclingViewController.swift */; };
 		FEA1A3672B9415C000CE3BDD /* NotificationViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA1A3662B9415C000CE3BDD /* NotificationViewContoller.swift */; };
+		FEA1A36F2B998B8900CE3BDD /* FadeAndScaleOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA1A36E2B998B8900CE3BDD /* FadeAndScaleOutViewController.swift */; };
+		FEA1A3712B999A5D00CE3BDD /* CATransitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA1A3702B999A5D00CE3BDD /* CATransitionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,8 @@
 		FEA1A3622B93807700CE3BDD /* ShakeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeViewController.swift; sourceTree = "<group>"; };
 		FEA1A3642B938DB200CE3BDD /* CirclingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CirclingViewController.swift; sourceTree = "<group>"; };
 		FEA1A3662B9415C000CE3BDD /* NotificationViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewContoller.swift; sourceTree = "<group>"; };
+		FEA1A36E2B998B8900CE3BDD /* FadeAndScaleOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadeAndScaleOutViewController.swift; sourceTree = "<group>"; };
+		FEA1A3702B999A5D00CE3BDD /* CATransitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CATransitionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +95,8 @@
 				FEA1A3622B93807700CE3BDD /* ShakeViewController.swift */,
 				FEA1A3642B938DB200CE3BDD /* CirclingViewController.swift */,
 				FEA1A3662B9415C000CE3BDD /* NotificationViewContoller.swift */,
+				FEA1A36E2B998B8900CE3BDD /* FadeAndScaleOutViewController.swift */,
+				FEA1A3702B999A5D00CE3BDD /* CATransitionViewController.swift */,
 			);
 			path = AnimationViewController;
 			sourceTree = "<group>";
@@ -181,6 +187,7 @@
 			files = (
 				FEA1A3572B90B6F000CE3BDD /* AnimationButton.swift in Sources */,
 				FEA1A3652B938DB200CE3BDD /* CirclingViewController.swift in Sources */,
+				FEA1A36F2B998B8900CE3BDD /* FadeAndScaleOutViewController.swift in Sources */,
 				FEA1A33E2B90513700CE3BDD /* MainViewController.swift in Sources */,
 				FEA1A3632B93807700CE3BDD /* ShakeViewController.swift in Sources */,
 				FEA1A3532B9095CF00CE3BDD /* ScaleViewController.swift in Sources */,
@@ -188,6 +195,7 @@
 				FEA1A3672B9415C000CE3BDD /* NotificationViewContoller.swift in Sources */,
 				FEA1A33A2B90513700CE3BDD /* AppDelegate.swift in Sources */,
 				FEA1A3612B937D5400CE3BDD /* RotateViewController.swift in Sources */,
+				FEA1A3712B999A5D00CE3BDD /* CATransitionViewController.swift in Sources */,
 				FEA1A33C2B90513700CE3BDD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
